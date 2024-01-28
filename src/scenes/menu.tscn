@@ -1,0 +1,101 @@
+[gd_scene load_steps=5 format=3 uid="uid://cyyf48gs7t2q4"]
+
+[ext_resource type="Texture2D" uid="uid://bdm262k7kruo5" path="res://assets/Button.png" id="1_cypcn"]
+[ext_resource type="Script" path="res://codes/menu.gd" id="1_oti6w"]
+[ext_resource type="FontFile" uid="uid://dikyhpeq4yecf" path="res://assets/fonts/fibberish.ttf" id="3_dn7u0"]
+[ext_resource type="AudioStream" uid="uid://cu61w4brb3jj" path="res://assets/GameJam/Menu.wav" id="3_pvl0k"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_oti6w")
+metadata/_edit_horizontal_guides_ = [323.0]
+metadata/_edit_vertical_guides_ = [577.0]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_cypcn")
+
+[node name="Mainmunebuttons" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -283.0
+offset_top = -130.0
+offset_right = 291.0
+offset_bottom = 120.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PlayButton" type="Button" parent="Mainmunebuttons"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 10.0
+text = "Play
+"
+text_overrun_behavior = 3
+clip_text = true
+
+[node name="op" type="Button" parent="Mainmunebuttons"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 10.0
+text = "Opções"
+text_overrun_behavior = 3
+clip_text = true
+
+[node name="OptionsButton2" type="Button" parent="Mainmunebuttons"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 10.0
+text = "Quit"
+text_overrun_behavior = 3
+clip_text = true
+
+[node name="GameLogo" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.129
+anchor_right = 0.5
+anchor_bottom = 0.129
+offset_left = -433.0
+offset_top = -60.592
+offset_right = 558.0
+offset_bottom = 149.408
+grow_horizontal = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("3_dn7u0")
+theme_override_font_sizes/normal_font_size = 120
+text = "Pegue o meu ovo"
+fit_content = true
+scroll_active = false
+tab_size = 15
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_pvl0k")
+autoplay = true
+
+[connection signal="pressed" from="Mainmunebuttons/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="Mainmunebuttons/op" to="." method="_on_op_pressed"]
+[connection signal="pressed" from="Mainmunebuttons/OptionsButton2" to="." method="_on_options_button_2_pressed"]

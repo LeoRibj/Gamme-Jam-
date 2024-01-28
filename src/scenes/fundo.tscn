@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://bdr37xv863xif"]
+
+[ext_resource type="Texture2D" uid="uid://dvmfl20tnynp0" path="res://assets/back/camp.png" id="1_vct4u"]
+
+[node name="fundo" type="ParallaxBackground"]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(1100, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer"]
+position = Vector2(608, 392.465)
+scale = Vector2(0.636458, 0.719509)
+texture = ExtResource("1_vct4u")

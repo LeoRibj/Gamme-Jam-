@@ -1,0 +1,167 @@
+[gd_scene load_steps=14 format=3 uid="uid://myxdtyt1hd3h"]
+
+[ext_resource type="Script" path="res://codes/level.gd" id="1_2eah7"]
+[ext_resource type="PackedScene" uid="uid://cwg00rguemcx7" path="res://scenes/parallax_layer.tscn" id="1_6mmql"]
+[ext_resource type="PackedScene" uid="uid://bdr37xv863xif" path="res://scenes/fundo.tscn" id="1_cwghs"]
+[ext_resource type="PackedScene" uid="uid://bpvjnjv4lihkk" path="res://scenes/parallax_background.tscn" id="2_h4b2j"]
+[ext_resource type="PackedScene" uid="uid://d4bdcgcvum3yk" path="res://scenes/player.tscn" id="2_yxab5"]
+[ext_resource type="PackedScene" uid="uid://b7ny6t13gvv83" path="res://scenes/enemy.tscn" id="3_mkauc"]
+[ext_resource type="PackedScene" uid="uid://d4cqqd2233uog" path="res://scenes/enemy_2.tscn" id="4_de3bn"]
+[ext_resource type="PackedScene" uid="uid://q7xi5ny3hjgg" path="res://scenes/pause.tscn" id="5_057al"]
+[ext_resource type="PackedScene" uid="uid://18v6kxsl72hm" path="res://scenes/Level-jam.tscn" id="5_spkda"]
+[ext_resource type="PackedScene" uid="uid://b55rmnowehhep" path="res://scenes/trap.tscn" id="7_nulmh"]
+[ext_resource type="PackedScene" uid="uid://dj1er0fccmtv0" path="res://scenes/dialo.tscn" id="11_vc8ay"]
+[ext_resource type="PackedScene" uid="uid://w41r3pe0jhmc" path="res://scenes/egg.tscn" id="12_eit6r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5d8kt"]
+size = Vector2(9, 729)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_2eah7")
+
+[node name="ParallaxLayer2" parent="." instance=ExtResource("1_6mmql")]
+visible = false
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("2_h4b2j")]
+visible = false
+
+[node name="fundo" parent="." instance=ExtResource("1_cwghs")]
+
+[node name="Enemy" parent="." instance=ExtResource("3_mkauc")]
+position = Vector2(391, 359)
+
+[node name="Enemy2" parent="." instance=ExtResource("3_mkauc")]
+position = Vector2(1265, 631)
+
+[node name="Enemy3" parent="." instance=ExtResource("3_mkauc")]
+position = Vector2(1712, 502)
+
+[node name="Enemy4" parent="." instance=ExtResource("3_mkauc")]
+position = Vector2(2911, 593)
+
+[node name="Enemy5" parent="." instance=ExtResource("3_mkauc")]
+position = Vector2(3009, 312)
+
+[node name="enemy2" parent="." instance=ExtResource("4_de3bn")]
+position = Vector2(656, 577)
+
+[node name="enemy3" parent="." instance=ExtResource("4_de3bn")]
+position = Vector2(1486, 369)
+
+[node name="enemy4" parent="." instance=ExtResource("4_de3bn")]
+position = Vector2(2356, 402)
+
+[node name="enemy5" parent="." instance=ExtResource("4_de3bn")]
+position = Vector2(3599, 642)
+
+[node name="CanvasLayer" parent="." instance=ExtResource("5_057al")]
+visible = false
+
+[node name="Node2D" parent="." instance=ExtResource("5_spkda")]
+position = Vector2(-32, 22)
+
+[node name="Player" parent="." instance=ExtResource("2_yxab5")]
+position = Vector2(16, 576)
+
+[node name="Trap" parent="." instance=ExtResource("7_nulmh")]
+position = Vector2(513, 367)
+
+[node name="Trap2" parent="." instance=ExtResource("7_nulmh")]
+position = Vector2(1631, 656)
+
+[node name="Trap3" parent="." instance=ExtResource("7_nulmh")]
+position = Vector2(2419, 656)
+
+[node name="Trap4" parent="." instance=ExtResource("7_nulmh")]
+position = Vector2(3375, 704)
+
+[node name="Trap5" parent="." instance=ExtResource("7_nulmh")]
+position = Vector2(3417, 704)
+
+[node name="Trap8" parent="." instance=ExtResource("7_nulmh")]
+position = Vector2(2913, 383)
+
+[node name="Trap9" parent="." instance=ExtResource("7_nulmh")]
+position = Vector2(3352, 645)
+rotation = -1.56464
+
+[node name="Trap10" parent="." instance=ExtResource("7_nulmh")]
+position = Vector2(3352, 612)
+rotation = -1.56464
+
+[node name="Trap11" parent="." instance=ExtResource("7_nulmh")]
+position = Vector2(3352, 579)
+rotation = -1.56464
+
+[node name="Trap6" parent="." instance=ExtResource("7_nulmh")]
+position = Vector2(3462, 705)
+
+[node name="Trap7" parent="." instance=ExtResource("7_nulmh")]
+position = Vector2(3503, 704)
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1156.5, 354.5)
+shape = SubResource("RectangleShape2D_5d8kt")
+
+[node name="Area2D2" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2(1173, 355)
+shape = SubResource("RectangleShape2D_5d8kt")
+
+[node name="Area2D3" type="Area2D" parent="."]
+position = Vector2(913, -12)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D3"]
+position = Vector2(1173, 355)
+shape = SubResource("RectangleShape2D_5d8kt")
+
+[node name="Area2D4" type="Area2D" parent="."]
+position = Vector2(928, -3)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D4"]
+position = Vector2(1173, 355)
+shape = SubResource("RectangleShape2D_5d8kt")
+
+[node name="dialo" parent="." instance=ExtResource("11_vc8ay")]
+
+[node name="egg" parent="." instance=ExtResource("12_eit6r")]
+position = Vector2(310, 589)
+
+[node name="egg2" parent="." instance=ExtResource("12_eit6r")]
+position = Vector2(578, 512)
+
+[node name="egg2" parent="egg2" instance=ExtResource("12_eit6r")]
+position = Vector2(569, 511)
+
+[node name="egg3" parent="." instance=ExtResource("12_eit6r")]
+position = Vector2(757, 399)
+
+[node name="egg4" parent="." instance=ExtResource("12_eit6r")]
+position = Vector2(1447, 592)
+
+[node name="egg5" parent="." instance=ExtResource("12_eit6r")]
+position = Vector2(1777, 511)
+
+[node name="egg6" parent="." instance=ExtResource("12_eit6r")]
+position = Vector2(2134, 543)
+
+[node name="egg7" parent="." instance=ExtResource("12_eit6r")]
+position = Vector2(2636, 476)
+
+[node name="egg8" parent="." instance=ExtResource("12_eit6r")]
+position = Vector2(3009, 319)
+
+[node name="egg9" parent="." instance=ExtResource("12_eit6r")]
+position = Vector2(3418, 462)
+
+[node name="egg10" parent="." instance=ExtResource("12_eit6r")]
+position = Vector2(3674, 622)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Area2D2" to="." method="_on_area_2d_2_body_entered"]
+[connection signal="body_entered" from="Area2D3" to="." method="_on_area_2d_3_body_entered"]
+[connection signal="body_entered" from="Area2D4" to="." method="_on_area_2d_4_body_entered"]
